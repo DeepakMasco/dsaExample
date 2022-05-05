@@ -17,14 +17,17 @@ public class FirstNegativeIntegerInArray {
 
 
         while(j<size) {
+            if (arr[j]<0) {
+                negativeNumbers.add(arr[j]);
+            }
             if(j-i+1 == k) {
-                //calc
+                System.out.println(negativeNumbers.get(0));
+                if (arr[i]==negativeNumbers.get(0)) {
+                    negativeNumbers.remove(0);
+                }
                 i++;
             }
             j++;
         }
-
-        negativeNumbers.forEach(System.out::println);
-
     }
 }
