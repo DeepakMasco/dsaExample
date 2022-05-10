@@ -1,4 +1,4 @@
-package slidingWindow;
+package slidingWindow.fixed;
 
 public class SubArrayMaxSum {
 
