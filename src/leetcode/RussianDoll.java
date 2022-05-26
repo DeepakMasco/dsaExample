@@ -43,7 +43,14 @@ import java.util.Comparator;
 // Ex. after sorting: (1,3), (3,5), (6,8), (6,7), (8,4), (9,5)
 // transform to question find LIS: [3,5,8,7,4,5] => like '300. Longest Increasing Subsequence'
 public class RussianDoll  {
-    public int maxEnvelopes(int[][] envelopes) {
+
+    public static void main(String[] args) {
+        int[][] envelopes = new int[][] {{5,4},{6,4},{6,7},{2,3}};
+        System.out.println(maxEnvelopes(envelopes));
+    }
+
+
+    public static int maxEnvelopes(int[][] envelopes) {
         if(envelopes.length < 2) return envelopes.length;
 
         Arrays.sort(envelopes, new EnvelopeComparator());
@@ -66,7 +73,7 @@ public class RussianDoll  {
         return size;
     }
 
-    class EnvelopeComparator implements Comparator<int[]> {
+    static class EnvelopeComparator implements Comparator<int[]> {
         public int compare(int[] e1, int[] e2) {
             return e1[0] == e2[0] ? e2[1] - e1[1] : e1[0] - e2[0];
         }
