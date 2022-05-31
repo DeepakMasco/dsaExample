@@ -29,7 +29,7 @@ public class RomanToInteger {
         map.put('C', 100);
         map.put('D', 500);
         map.put('M', 1000);
-int sum = 0;
+        int sum = 0;
         for(int i=0;i<s.length();i++) {
             char c = s.charAt(i);
             int nextIndex = i+1;
