@@ -1,6 +1,7 @@
 package tree;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class TreeOperations {
 
@@ -13,6 +14,9 @@ public class TreeOperations {
 
          System.out.println("PreOrder Traversal");
         preOrder(root);
+
+        System.out.println("PreOrder Traversal With Iteration");
+        preOrderIterative(root);
 
         System.out.println("PostOrder Traversal");
         postOrder(root);
@@ -83,5 +87,25 @@ public class TreeOperations {
         return size(root.left) + size(root.right) + 1;
     }
 
+    public static void preOrderIterative(Node root) {
+//Node,Left,Right
+        Stack<Node> preOrderStack = new Stack<>();
 
+        if (root==null) {
+            return;
+        }
+        preOrderStack.push(root);
+
+        while(!preOrderStack.isEmpty()) {
+            Node node = preOrderStack.pop();
+            System.out.println(node.data);
+
+            if(node.right!=null) {
+                preOrderStack.push(node.right);
+            }
+            if(node.left!=null) {
+                preOrderStack.push(node.left);
+            }
+        }
+    }
 }
