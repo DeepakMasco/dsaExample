@@ -1,31 +1,38 @@
 package leetcode;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Testing {
 
     public static void main(String[] args) {
-        int[] T = new int[] {0,3,0,0,5,0,5};
-        int[] A = new int[] {4,2,6,1,0};
-        int result = 0;
-        Set<Integer> set = new HashSet<>();
-        for(int skill: A) {
-            result+= countSkill(T, skill, set);
-            set.add(skill);
-        }
-       System.out.println(result);
+       List<List<Integer>> result = threeSum(new int[] {-1,0,1,2,-1,-4});
+       result.forEach(System.out::println);
     }
 
+    public static List<List<Integer>> threeSum(int[] nums) {
+    Arrays.sort(nums);
+            List<List<Integer>> result = new ArrayList<>();
 
-    // write your code in Java SE 8
+            for(int i=0;i<nums.length;i++) {
+                int sum = - nums[i];
+                Map<Integer, Integer> map = new HashMap<>();
+                for(int j=i+1;j<nums.length;j++) {
+                    if (i!=j) {
+                        int remaining = sum - nums[j];
+                        if(map.containsKey(remaining)) {
+                            List<Integer> pair = new ArrayList<>();
+                            pair.add(nums[i]);
+                            pair.add(nums[j]);
+                            pair.add(remaining);
+                            result.add(pair);
+                        } else {
+                            map.put(nums[j],j);
+                        }
+                    }
+                }
+            }
 
-
-    public static int countSkill(int[] T, int skill, Set<Integer> set) {
-        if(set.contains(T[skill])) {
-            return 1;
+            return result;
         }
-        set.add(T[skill]);
-        return countSkill(T, T[skill], set)+1;
-    }
+
 }
