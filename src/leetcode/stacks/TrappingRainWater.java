@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.stacks;
 
 public class TrappingRainWater {
 
