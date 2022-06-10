@@ -20,6 +20,10 @@ span is 1, 60 is smaller than 80 so the
 span is 1, 70 is greater than 60 so the
 span is 2 and so on. Hence the output will
 be 1 1 1 2 1 4 6.
+
+
+
+The above question is similar to i - nearest greater element from left index .
 */
 
 public class StockSpan {
