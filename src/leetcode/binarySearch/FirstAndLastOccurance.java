@@ -3,6 +3,7 @@ package leetcode.binarySearch;
 public class FirstAndLastOccurance {
 
     public static void main(String[] args) {
+
         int [] ans = searchRange(new int[] {5,7,7,8,8,8,8,8,9,10}, 8);
         System.out.println(ans[0]);
         System.out.println(ans[1]);
