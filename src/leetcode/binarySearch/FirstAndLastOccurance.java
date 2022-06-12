@@ -8,6 +8,8 @@ public class FirstAndLastOccurance {
         System.out.println(ans[0]);
         System.out.println(ans[1]);
 
+        System.out.println("Count Of Elements Presenet " + (ans[1]-ans[0]+1));
+
     }
 
     public static int[] searchRange(int[] nums, int target) {
