@@ -25,6 +25,7 @@ public class FindFloorValue {
 
     public static void main(String[] args) {
         System.out.println(getFloorValue(new int[] {1,2,8,10,11,12,19},7,5));
+        System.out.println(getCeilingValue(new int[] {1,2,8,10,11,12,19},7,5));
     }
 
     private static int getFloorValue(int[] arr, int N, int x) {
@@ -43,6 +44,28 @@ public class FindFloorValue {
             } if (arr[mid]<x) {
                 start = mid+1;
                 res = mid;
+            }
+
+        }
+        return res;
+    }
+
+    private static int getCeilingValue(int[] arr, int N, int x) {
+        int start = 0;
+        int end = N-1;
+        int res = -1;
+        while(start<=end) {
+
+            int mid = start + (end-start)/2;
+
+            if(arr[mid]==x) {
+                return mid;
+            }
+            if(arr[mid]>x) {
+                end = mid-1;
+                res = mid;
+            } if (arr[mid]<x) {
+                start = mid+1;
             }
 
         }
