@@ -34,7 +34,7 @@ import java.util.Comparator;
 
         The same idea can be applied to problems of higher dimensions. For example, box fitting is three dimensions, width, height, and length. Sorting width
         ascending and height descending reduces the problem by one dimension. Finding the LIS by height further reduces the problem by another dimension.
-        When find LIS based on only length, it becomes a standard LIS problem.*/
+        When find LIS based on onl`y length, it becomes a standard LIS problem.*/
 
 // binary search solution: O(nlogn)
 // width is increasing, but if two widths are the same, the height is decreasing

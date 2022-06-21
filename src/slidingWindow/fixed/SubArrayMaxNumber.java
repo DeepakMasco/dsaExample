@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SubArrayMaxNumber {
-
+//TODO - Check the solution if it works correctly.
     public static void main(String[] args) {
 
         int[] arr = new int[] {-10,20,-30,-4,5,6,8};
