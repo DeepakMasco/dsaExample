@@ -1,6 +1,8 @@
 package leetcode.Heap;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.PriorityQueue;
 
 /*
@@ -21,6 +23,8 @@ public class KClosestNumbers {
 
     public static void main(String[] args) {
         printKClosestNo(new int[] {5,6,7,8,9,10},7, 3);
+        List<Integer> numbers = findClosestElements(new int[] {5,6,7,8,9,10},3, 7);
+        numbers.forEach(System.out::println);
     }
 
     private static void printKClosestNo(int[] arr, int key, int values) {
@@ -44,5 +48,27 @@ public class KClosestNumbers {
         while(maxPq.size()>0) {
             System.out.println(maxPq.poll().value);
         }
+    }
+
+    //This appraoch uses binary search in a window form and which is way much faster compared to heap. But we can use this only if array is sorted
+    private static List<Integer> findClosestElements(int[] arr, int k, int x) {
+        List<Integer> result = new ArrayList<>();
+
+        int start = 0;
+        int end = arr.length-1;
+
+        while(end-start>=k) {
+            int lowDiff = Math.abs(arr[start]-x);
+            int highDiff = Math.abs(arr[end]-x);
+
+            if(lowDiff<=highDiff) end--;
+            else start++;
+        }
+
+        while(start<=end) {
+            result.add(arr[start++]);
+        }
+
+        return result;
     }
 }
