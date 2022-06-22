@@ -18,15 +18,15 @@ public class SortKSortedArray {
     private static int[] sortArray(int[] arr, int k) {
         int[] result = new int[arr.length];
         int j = 0;
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        PriorityQueue<Integer> minPq = new PriorityQueue<>();
         for(int i: arr) {
-            pq.add(i);
-            if(pq.size()>k) {
-                result[j++] = pq.poll();
+            minPq.add(i);
+            if(minPq.size()>k) {
+                result[j++] = minPq.poll();
             }
         }
-        while(pq.size()>0) {
-            result[j++] = pq.poll();
+        while(minPq.size()>0) {
+            result[j++] = minPq.poll();
         }
         return result;
     }
