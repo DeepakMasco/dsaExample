@@ -2,7 +2,12 @@ package slidingWindow.fixed;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+* In this we need to find the first negative integer of every subarray of size K.
+* N - No of Elements in Array
+* Time Complexity: O(N)
+* Auxiliary Space: O(K) as we will be storing K+1 elements in array and then removing one. So we can use it as K only
+* */
 public class FirstNegativeIntegerInArray {
 
     //We will return 0 if there is no negative integer in the sub array
@@ -15,7 +20,6 @@ public class FirstNegativeIntegerInArray {
         int j=0;
 
         List<Integer> negativeNumbers = new ArrayList<>();
-
 
         while(j<size) {
             if (arr[j]<0) {
