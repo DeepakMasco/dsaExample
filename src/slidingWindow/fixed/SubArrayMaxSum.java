@@ -1,5 +1,9 @@
 package slidingWindow.fixed;
-
+/*
+* In this we need to find the max sum for any subarray of size K which is given in the question.
+* Time Complexity: O(n)
+* Auxiliary Space: O(1)
+* */
 public class SubArrayMaxSum {
 
     public static void main(String[] args) {
