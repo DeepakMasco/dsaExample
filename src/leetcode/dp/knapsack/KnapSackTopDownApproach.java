@@ -15,9 +15,11 @@ public class KnapSackTopDownApproach {
 
         for(int i=0;i<=n;i++) {
             for(int j=0;j<=W;j++) {
+                //recursive function base condition
                 if(i==0 || j==0) {
                     dp[i][j] = 0;
                 }
+
                 else if (wt[i-1]<=j) {
                 dp[i][j] = Math.max(val[i-1]+ dp[i-1][j-wt[i-1]], dp[i-1][j]);
                 } else {
@@ -25,7 +27,6 @@ public class KnapSackTopDownApproach {
                 }
             }
         }
-
         return dp[n][W];
     }
 }

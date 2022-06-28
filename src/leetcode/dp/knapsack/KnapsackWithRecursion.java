@@ -1,5 +1,13 @@
 package leetcode.dp.knapsack;
-
+/*
+*
+* In this we need to maximize the value of kanpsack in given weight capacity.
+* So we make choice diagram like if weight <= capacity then we can either choose it or leave it.
+* If wieght>capacity then we need to leave that element and move ahead.
+*
+*
+* This solution can give Time Limit in some cases as we are re-calculating things here.
+* */
 public class KnapsackWithRecursion {
 
     public static void main(String[] args) {
@@ -20,11 +28,13 @@ public class KnapsackWithRecursion {
         }
         if (wt[n-1]<=W) {
             return Math.max(
+                    //Picking weight
                     val[n-1]+knapSack(W-wt[n-1],wt,val,n-1),
-                    knapSack(W,wt,val,n-1)
+                             //Leaving
+                             knapSack(W,wt,val,n-1)
             );
         }
-
+//Leaving as weight size is > capacity
         return knapSack(W,wt,val,n-1);
 
     }
