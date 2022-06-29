@@ -53,6 +53,8 @@ public class MinSubsetSumDifference {
 
         int mid = (range/2)+1;
         int ans = Integer.MAX_VALUE;
+        // We can optimize this if we just create a 2d matrix of this required length then i<rangeOfSum.length only
+        // with this we can remove this mid variable.
         for(int i=0;i<mid;i++) {
             if(rangeOfSum[i]==true) {
                 ans = Math.min(ans, range-2*i);
@@ -64,6 +66,8 @@ public class MinSubsetSumDifference {
 
 
     private static boolean[] calculate(int[] nums, int n, int sum) {
+
+        //we can do sum = sum/2. So that only required matrix will be formed and the above i loop will go till full arr length.
         boolean[][] dp = new boolean[n+1][sum+1];
 
         for(int i=0;i<=n;i++) {
