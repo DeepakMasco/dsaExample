@@ -10,7 +10,12 @@ Output:
 Explanation:
 In the array, the next larger element
 to 1 is 3 , 3 is 4 , 2 is 4 and for 4 ?
-since it doesn't exist, it is -1.*/
+since it doesn't exist, it is -1.
+
+Time Complexity: O(N)
+Auxiliary Space: O(N)
+
+*/
 
 public class NearestGreaterElement {
 
@@ -32,7 +37,8 @@ public class NearestGreaterElement {
         for(int i=0;i<n;i++) {
             if(stack.isEmpty()) {
                 output[j++] = -1;
-            } else {
+            }
+            else {
                 if(stack.peek()>longs[i]) {
                     output[j++] = stack.peek();
                 } else {

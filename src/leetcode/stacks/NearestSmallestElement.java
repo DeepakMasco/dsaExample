@@ -1,7 +1,19 @@
 package leetcode.stacks;
 
 import java.util.Stack;
+/*
+*
+* N = 4, arr[] = [4 5 2 10 8]
+Output:
+ 2 2 -1 8 -1
+Explanation:
+In the array, the next smaller element
+since it doesn't exist, it is -1.
 
+Time Complexity: O(N)
+Auxiliary Space: O(N)
+*
+* */
 public class NearestSmallestElement {
 
     public static void main(String[] args) {
