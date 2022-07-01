@@ -22,6 +22,8 @@ span is 2 and so on. Hence the output will
 be 1 1 1 2 1 4 6.
 
 
+Time Complexity: O(N)
+Auxiliary Space: O(N)
 
 The above question is similar to i - nearest greater element from left index .
 */

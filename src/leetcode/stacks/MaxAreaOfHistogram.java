@@ -17,16 +17,22 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 
 We can reduce this into finding the next smallest from left and right and then doing rightIndex-leftIndex-1 * arr[i] = area
 and then we can find the max area for the same.
+
+
+
+Time Complexity: O(2N)
+Auxiliary Space: O(2N+2N)
 */
 public class MaxAreaOfHistogram {
 
     public static void main(String[] args) {
-        System.out.println(largestRectangleArea(new int[] {1,1}));
+        System.out.println(largestRectangleArea(new int[] {2,1,5,6,2,3}));
     }
     public static int largestRectangleArea(int[] heights) {
         int n = heights.length;
         int[] fromLeft = nextSmallerElementToLeft(heights,n);
         int[] fromRight = nextSmallerElementToRight(heights,n);
+
         int max = 0;
 
         for(int i=0;i<n;i++) {
