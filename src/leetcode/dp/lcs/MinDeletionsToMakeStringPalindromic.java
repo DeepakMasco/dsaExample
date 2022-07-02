@@ -16,6 +16,10 @@ Explanation: We'll remove 'e' and
 * we can do that using revere os string and then finding LCS and then ans would be
 * N - LCS Length = Deletion required.
 *
+* This can be also used in to find min no of insertions.
+* As the char we are deleting are not having any duplicate elemnts to make it palindrome.
+* So either we can remove those or add same amount of char to make it palindrome.
+*
 * */
 public class MinDeletionsToMakeStringPalindromic {
 
