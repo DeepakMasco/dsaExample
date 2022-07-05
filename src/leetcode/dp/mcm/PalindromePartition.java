@@ -22,7 +22,7 @@ public class PalindromePartition {
 
     public static void main(String[] args) {
         // As we are just accessing current element the i can start from 0 and j will start from len - 1
-        System.out.println(solve("nitin",0,5-1));
+        System.out.println(solve("nitik",0,5-1));
     }
 
     private static int solve(String input, int i, int j)

@@ -11,7 +11,7 @@ public class PalindromePartitionMemoization {
             Arrays.fill(row,-1);
         }
         // As we are just accessing current element the i can start from 0 and j will start from len - 1
-        System.out.println(solve("nitin",0,5-1,dp));
+        System.out.println(solve("nitik",0,5-1,dp));
     }
 
     private static int solve(String input, int i, int j, int[][] dp)
