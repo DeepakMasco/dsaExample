@@ -42,29 +42,19 @@ public class PrintingService {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // print 1 to N (all even print) N  a
         m = 10;
 
         PrintingService printingService = new PrintingService();
 
-        Thread oddThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                printingService.printOdd();
-            }
-        });
+        Thread oddThread = new Thread(() -> printingService.printOdd());
 
 
-        Thread evenThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                printingService.printEven();
-
-            }
-        });
+        Thread evenThread = new Thread(() -> printingService.printEven());
 
         oddThread.start();
+
         evenThread.start();
 
 

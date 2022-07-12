@@ -37,7 +37,6 @@ public class CoinChangeMaximumways {
     {
         // Your code goes here
         int[][] dp = new int[n+1][sum+1];
-
         dp[0][0] = 1;
         for(int i = 1; i <= sum; i++)
             dp[0][i] = 0;

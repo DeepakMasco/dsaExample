@@ -1,5 +1,6 @@
 package leetcode.dp.knapsack.unbounded;
-/*Given a rod of length N inches and an array of prices, price[] that contains prices of all pieces of size smaller than N. Determine the maximum value obtainable by cutting up the rod and selling the pieces.
+/*Given a rod of length N inches and an array of prices, price[] that contains prices of all pieces of size smaller than N.
+ Determine the maximum value obtainable by cutting up the rod and selling the pieces.
 
 
 
