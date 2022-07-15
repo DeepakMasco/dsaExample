@@ -5,7 +5,8 @@ public class FindTwoNonRepeatingEleInArray {
     public static void main(String[] args) {
         int[] input = new int[]{5,5,1,1,4,3,4,7};
         //ans should be 3,7 as they only appear once.
-        //one way to do this is use HashMap and when frequency =2 remove it and then after loop the elements remains in hashMap is 3,7 but we use N space here
+        //one way to do this is use HashMap and when frequency =2 remove it
+        // and then after loop the elements remains in hashMap is 3,7 but we use N space here
         // 0^5^5^1^1^4^3^4^7 - gives 3^7
         //Now we will divide the group again where
 

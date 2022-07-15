@@ -1,10 +1,7 @@
 package leetcode;
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.PriorityQueue;
-import java.util.stream.Collectors;
 
 public class LongestConsecutiveSubSequence {
 /*
@@ -22,34 +19,31 @@ public class LongestConsecutiveSubSequence {
                         + findLongestConseqSubseqWithPQ(arr, n));
     }
 
-    static int findLongestConseqSubseq(int arr[], int n)
+    static int findLongestConseqSubseq(int nums[], int n)
     {
-        HashSet<Integer> S = new HashSet<Integer>();
-        int ans = 0;
 
-        // Hash all the array elements
-        for (int i = 0; i < n; ++i)
-            S.add(arr[i]);
+        HashSet<Integer> set = new HashSet<>();
 
-        for (int i = 0; i < n; ++i)
-        {
-            // if current element is the starting
-            // element of a sequence
-            if (!S.contains(arr[i] - 1))
-            {
-                // Then check for next elements
-                // in the sequence
-                int j = arr[i];
-                while (S.contains(j))
+        for(int i:nums) {
+            set.add(i);
+        }
+
+        int res = 0;
+        for(int i: nums) {
+            if(!set.contains(i-1)) {
+                int j = i;
+                int ans = 0;
+
+                while(set.contains(j)) {
+                    set.remove(j);
                     j++;
+                    ans++;
+                }
 
-                // update  optimal length if this
-                // length is more
-                if (ans < j - arr[i])
-                    ans = j - arr[i];
+                res = Math.max(res,ans);
             }
         }
-        return ans;
+        return res;
     }
 
 
