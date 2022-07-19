@@ -21,7 +21,7 @@ public class Bst {
         boolean ans = checkBst(root);
         System.out.println("The given tree is BST : " + ans);
 
-        boolean ans2ndWay = checkBst2ndWay(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        boolean ans2ndWay = checkBst2ndWay(root, Long.MIN_VALUE, Long.MAX_VALUE);
         System.out.println("The given tree is BST : " + ans2ndWay);
     }
 
@@ -40,14 +40,14 @@ public class Bst {
         return true;
     }
 
-    private static boolean checkBst2ndWay(Node root, int min, int max) {
+    private static boolean checkBst2ndWay(Node root, long min, long max) {
        if(root == null) {
            return true;
        }
-       if(root.data < min || root.data > max) {
+       if(root.data <= min || root.data >= max) {
            return false;
        }
-        return checkBst2ndWay(root.left, min, root.data-1) && checkBst2ndWay(root.right, root.data +1, max);
+        return checkBst2ndWay(root.left, min, root.data) && checkBst2ndWay(root.right, root.data, max);
     }
 
     private static Node insertNewNode(Node root, int key) {

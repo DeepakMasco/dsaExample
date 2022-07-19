@@ -1,5 +1,7 @@
 package tree;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -77,6 +79,16 @@ public class TreeOperations {
 
         int temp = Math.min(getMin(root.left),getMin(root.right));
         return Math.min(temp,root.data);
+    }
+
+    // to return the list of preorder
+    public List<Integer> preOrder(Node root, ArrayList<Integer> arr){
+        if(root==null)
+            return arr;
+        arr.add(root.data);
+        preOrder(root.left,arr);
+        preOrder(root.right,arr);
+        return arr;
     }
 
 
