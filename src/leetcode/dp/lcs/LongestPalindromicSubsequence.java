@@ -19,7 +19,8 @@ Explanation: One possible longest palindromic subsequence is "bb".
 
 
 We can see this question as variation of a LCS.
-we just reverse the string and then find the common subsequence using LCS method and the output will be palindromic as we reversed the string.
+we just reverse the string and then
+find the common subsequence using LCS method and the output will be palindromic as we reversed the string.
 
 
 */

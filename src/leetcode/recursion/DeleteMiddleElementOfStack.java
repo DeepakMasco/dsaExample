@@ -11,18 +11,12 @@ public class DeleteMiddleElementOfStack {
         stack.push(3);
         stack.push(4);
         stack.push(5);
-
-        deleteMid(stack, stack.size());
+        int mid = (stack.size()+1)/2;
+        removeElement(stack, mid);
 
         System.out.println(stack);
     }
 
-    public static void deleteMid(Stack<Integer> s, int sizeOfStack){
-        // code here
-        int mid = (sizeOfStack+1)/2;
-
-        removeElement(s, mid);
-    }
 
     public static void removeElement(Stack<Integer>s,int mid) {
         if(s.size()==mid) {

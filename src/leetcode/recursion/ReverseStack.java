@@ -25,7 +25,7 @@ public class ReverseStack {
 
         int temp = stack.pop();
         reverse(stack);
-       insert(stack, temp);
+        insert(stack, temp);
 
     }
 

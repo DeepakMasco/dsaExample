@@ -19,6 +19,7 @@ public class KClosestNumbers {
             this.diff = diff;
             this.value = value;
         }
+
     }
 
     public static void main(String[] args) {

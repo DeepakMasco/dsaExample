@@ -49,7 +49,9 @@ System.out.println(ans);*/
     int[] maxR = new int[len];
     int[] maxL = new int[len];
     maxR[0] = height[0];
-        maxL[len-1] = height[len-1];
+    maxL[len-1] = height[len-1];
+
+
     for(int i=1;i<len;i++) {
         maxR[i] = Math.max(height[i], maxR[i-1]);
     }

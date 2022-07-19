@@ -3,7 +3,8 @@ package leetcode.recursion;
 import java.util.ArrayList;
 import java.util.List;
 /*
-* Given a string you need to print all possible strings that can be made by placing spaces (zero or one) in between them. The output should be printed in sorted increasing order of strings
+* Given a string you need to print all possible strings that can be made by placing spaces
+* (zero or one) in between them. The output should be printed in sorted increasing order of strings
 
 Example 1:
 

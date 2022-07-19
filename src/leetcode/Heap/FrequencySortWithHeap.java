@@ -6,19 +6,26 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class FrequencySortWithHeap {
-    static class Pair {
-    int num;
-    int freq;
-
-    Pair(int num, int freq) {
-        this.num = num;
-        this.freq = freq;
-    }
-}
 
 
     public static void main(String[] args) {
-        int[] ans = frequencySort(new int[]{1,1,2,2,2,3});
+
+
+        PriorityQueue< Integer > prq = new PriorityQueue <> ();
+
+        // insert values in the queue
+        prq.add(6);
+        prq.add(9);
+        prq.add(5);
+        prq.add(64);
+        prq.add(6);
+
+        //print values
+        while (!prq.isEmpty()) {
+            System.out.print(prq.poll()+" ");
+        }
+        // Sort the array in increasing freq and if the freq is same then sort in descending order of no.
+        int[] ans = frequencySort(new int[]{1,1,1,2,2,2,3});
         for(int i: ans) {
             System.out.println(i);
         }

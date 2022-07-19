@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.binarySearch;
 
 public class ShipWeights {
 
@@ -8,10 +8,11 @@ public class ShipWeights {
 
     public static int shipWithinDays(int[] weights, int days) {
         // find the mimimum capacity and the maximum capacity
-        // the minimum should be the least weight, the maximum should be the weight sum
-        int low = Integer.MAX_VALUE, high = 0;
+        // the minimum should be the max weight present as even if we ship 1 weight in 1 day. Then we need the max weight
+        // to be handled by ship., the maximum should be the weight sum
+        int low = Integer.MIN_VALUE, high = 0;
         for(int weight : weights){
-            low = Math.min(low, weight);
+            low = Math.max(low, weight);
             high += weight;
         }
 

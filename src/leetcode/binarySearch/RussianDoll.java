@@ -1,13 +1,15 @@
-package leetcode;
+package leetcode.binarySearch;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
 
 
-/*You are given a 2D array of integers envelopes where envelopes[i] = [wi, hi] represents the width and the height of an envelope.
+/*You are given a 2D array of integers envelopes where envelopes[i] = [wi, hi]
+ represents the width and the height of an envelope.
 
-        One envelope can fit into another if and only if both the width and height of one envelope are greater than the other envelope's width and height.
+        One envelope can fit into another if and only if both the width and height of one
+        envelope are greater than the other envelope's width and height.
 
         Return the maximum number of envelopes you can Russian doll (i.e., put one inside the other).
 
@@ -27,13 +29,18 @@ import java.util.Comparator;
         Output: 1*/
 
 
-/*This problem is asking for LIS in two dimensions, width and height. Sorting the width reduces the problem by one dimension. If width is strictly increasing,
-        the problem is equivalent to finding LIS in only the height dimension. However, when there is a tie in width, a strictly increasing sequence in height
-        may not be a correct solution. For example, [[3,3] cannot fit in [3,4]]. Sorting height in descending order when there is a tie prevents
+/*This problem is asking for LIS in two dimensions, width and height. Sorting the width
+ reduces the problem by one dimension. If width is strictly increasing,
+        the problem is equivalent to finding LIS in only the height dimension.
+         However, when there is a tie in width, a strictly increasing sequence in height
+        may not be a correct solution. For example, [[3,3] cannot fit in [3,4]].
+         Sorting height in descending order when there is a tie prevents
         such a sequence to be included in the solution.
 
-        The same idea can be applied to problems of higher dimensions. For example, box fitting is three dimensions, width, height, and length. Sorting width
-        ascending and height descending reduces the problem by one dimension. Finding the LIS by height further reduces the problem by another dimension.
+        The same idea can be applied to problems of higher dimensions. For example,
+         box fitting is three dimensions, width, height, and length. Sorting width
+        ascending and height descending reduces the problem by one dimension.
+        Finding the LIS by height further reduces the problem by another dimension.
         When find LIS based on onl`y length, it becomes a standard LIS problem.*/
 
 // binary search solution: O(nlogn)
@@ -73,9 +80,11 @@ public class RussianDoll  {
         return size;
     }
 
+
     static class EnvelopeComparator implements Comparator<int[]> {
         public int compare(int[] e1, int[] e2) {
             return e1[0] == e2[0] ? e2[1] - e1[1] : e1[0] - e2[0];
         }
+
     }
 }

@@ -7,7 +7,8 @@ import java.util.Arrays;
     horizontalCuts[i] is the distance from the top of the rectangular cake to the ith horizontal cut and similarly, and
     verticalCuts[j] is the distance from the left of the rectangular cake to the jth vertical cut.
 
-Return the maximum area of a piece of cake after you cut at each horizontal and vertical position provided in the arrays horizontalCuts and verticalCuts. Since the answer can be a large number, return this modulo 109 + 7.
+Return the maximum area of a piece of cake after you cut at each horizontal and vertical position provided
+in the arrays horizontalCuts and verticalCuts. Since the answer can be a large number, return this modulo 109 + 7.
 
 
 
@@ -15,7 +16,8 @@ Example 1:
 
 Input: h = 5, w = 4, horizontalCuts = [1,2,4], verticalCuts = [1,3]
 Output: 4
-Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area.
+Explanation: The figure above represents the given rectangular cake.
+Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area.
 
 
 https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/
@@ -41,11 +43,12 @@ public class MaxAreaOfCake {
         int n = horizontalCuts.length;
         int m = verticalCuts.length;
         Arrays.sort(verticalCuts);
+        // finding max betwwen last and first gap
         int maxH = Math.max(horizontalCuts[0], h - horizontalCuts[n-1]);
         int maxV = Math.max(verticalCuts[0], w -verticalCuts[m-1]);
 
 
-
+//finding the rest gaps excluding last and first
         for(int i=1;i<n;i++) {
             maxH = Math.max(maxH, horizontalCuts[i] - horizontalCuts[i-1]);
         }

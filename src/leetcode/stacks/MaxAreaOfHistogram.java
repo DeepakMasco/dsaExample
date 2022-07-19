@@ -15,7 +15,8 @@ Explanation: The above is a histogram where width of each bar is 1.
 The largest rectangle is shown in the red area, which has an area = 10 units.
 
 
-We can reduce this into finding the next smallest from left and right and then doing rightIndex-leftIndex-1 * arr[i] = area
+We can reduce this into finding the next smallest
+from left and right and then doing rightIndex-leftIndex-1 * arr[i] = area
 and then we can find the max area for the same.
 
 

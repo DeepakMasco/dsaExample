@@ -1,4 +1,4 @@
-package tree;
+package slidingWindow.fixed;
 
 public class MinSwaps {
 

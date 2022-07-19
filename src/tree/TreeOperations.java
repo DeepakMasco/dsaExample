@@ -24,6 +24,20 @@ public class TreeOperations {
         int height = height(root);
         System.out.println("Height Of Tree");
         System.out.println(height);
+
+
+        int size = getSize(root);
+        System.out.println("Size Of Tree");
+        System.out.println(height);
+
+        int min = getMin(root);
+        System.out.println("Min Of Tree");
+        System.out.println(min);
+
+        int max = getMax(root);
+        System.out.println("Maxx Of Tree");
+        System.out.println(max);
+
     }
 
     public static Node createTree() {
@@ -46,6 +60,36 @@ public class TreeOperations {
         return root;
     }
 
+
+    public static int getMax(Node root) {
+        if(root==null) {
+            return Integer.MIN_VALUE;
+        }
+
+        int temp = Math.max(getMax(root.left),getMax(root.right));
+        return Math.max(temp,root.data);
+    }
+
+    public static int getMin(Node root) {
+        if(root==null) {
+            return Integer.MAX_VALUE;
+        }
+
+        int temp = Math.min(getMin(root.left),getMin(root.right));
+        return Math.min(temp,root.data);
+    }
+
+
+    public static int getSize(Node root)
+    {
+//add Code here.
+        if(root==null) {
+            return 0;
+        }
+
+        return getSize(root.left)+getSize(root.right)+1;
+
+    }
     public static void inOrder(Node root) {
         if(root == null){
             return;

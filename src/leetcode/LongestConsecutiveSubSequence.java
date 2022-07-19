@@ -30,6 +30,7 @@ public class LongestConsecutiveSubSequence {
 
         int res = 0;
         for(int i: nums) {
+            // AS this will be the first element for the sequence. As number-1 is not present.
             if(!set.contains(i-1)) {
                 int j = i;
                 int ans = 0;

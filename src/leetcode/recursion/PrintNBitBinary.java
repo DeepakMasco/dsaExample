@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/*Given a positive integer N, the task is to find all the N bit binary numbers having more than or equal 1’s than 0’s for any prefix of the number.
+/*Given a positive integer N, the task is to find all the N bit binary numbers
+ having more than or equal 1’s than 0’s for any prefix of the number.
 
 Example 1:
 
