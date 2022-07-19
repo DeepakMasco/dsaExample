@@ -54,11 +54,51 @@ public class Bst {
         if (root==null) {
             return new Node(key);
         }
+
+        // Using simple binary search to find if it exists in left or right.
         if(root.data>key) {
             root.left = insertNewNode(root.left, key);
         } else if(root.data<key) {
             root.right = insertNewNode(root.right, key);
         }
         return root;
+    }
+
+// In a BST inorder traversal will always give sorted no.
+    // So if we want to delete any node we need to find the inorder successor(next no) of the key
+    public Node deleteNode(Node root, int key) {
+        if(root==null) {
+            return root;
+        }
+
+        if(root.data>key) {
+            root.left = deleteNode(root.left,key);
+        } else if(root.data<key) {
+            root.right = deleteNode(root.right,key);
+        }
+        else {
+            if(root.left==null) return root.right;
+            if(root.right==null) return root.left;
+
+            // We find the next no which will come in inorderTraversal/
+            // As it is BST so the leftMost element will be the smallest always.
+
+            int min = findMin(root.right);
+            // we update the current node with the data of min Value
+            root.data = min;
+            // then we delete the node which contains the min value by going to right side of that.
+            root.right = deleteNode(root.right,min);
+        }
+        return root;
+    }
+
+    public int findMin(Node root) {
+        int min = root.data;
+        while(root.left!=null) {
+            min = root.left.data;
+            root = root.left;
+        }
+
+        return min;
     }
 }

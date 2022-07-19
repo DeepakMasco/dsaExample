@@ -28,7 +28,7 @@ public class TreeOperations {
 
         int size = getSize(root);
         System.out.println("Size Of Tree");
-        System.out.println(height);
+        System.out.println(size);
 
         int min = getMin(root);
         System.out.println("Min Of Tree");
@@ -82,7 +82,7 @@ public class TreeOperations {
 
     public static int getSize(Node root)
     {
-//add Code here.
+//it means the total no of nodes present in the tree
         if(root==null) {
             return 0;
         }
