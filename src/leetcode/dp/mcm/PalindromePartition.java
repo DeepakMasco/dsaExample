@@ -1,5 +1,7 @@
 package leetcode.dp.mcm;
-/*Given a string str, a partitioning of the string is a palindrome partitioning if every sub-string of the partition is a palindrome. Determine the fewest cuts needed for palindrome partitioning of the given string.
+/*Given a string str, a partitioning of the string is a palindrome partitioning if
+every sub-string of the partition is a palindrome.
+ Determine the fewest cuts needed for palindrome partitioning of the given string.
 
 
 Example 1:
@@ -22,7 +24,7 @@ public class PalindromePartition {
 
     public static void main(String[] args) {
         // As we are just accessing current element the i can start from 0 and j will start from len - 1
-        System.out.println(solve("nitik",0,5-1));
+        System.out.println(solve("aab",0,3-1));
     }
 
     private static int solve(String input, int i, int j)
@@ -31,6 +33,7 @@ public class PalindromePartition {
         //As single char is already a palindrome.
         //And if the given string is already palindrome we need 0 partition
         if(i>=j || isPalindrome(input, i , j))  {
+            System.out.println(input.substring(i,j+1));
             return 0;
         }
         int min = Integer.MAX_VALUE;

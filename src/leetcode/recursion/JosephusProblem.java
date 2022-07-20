@@ -37,6 +37,7 @@ The safe position is 1.
 public class JosephusProblem {
 
     public static void main(String[] args) {
+
         int n = 7;
         int k = 3;
         k = k-1;
