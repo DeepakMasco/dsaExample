@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class DetectCycleInUndirectedGraph {
 
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
-        // Code here
 
         boolean[] vis = new boolean[V];
         Arrays.fill(vis, false);
