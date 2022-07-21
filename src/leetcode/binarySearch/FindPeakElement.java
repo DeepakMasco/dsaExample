@@ -1,12 +1,13 @@
 package leetcode.binarySearch;
 
 
-// The below solution can be used in the bitonic array also. It means first array is strictly increasing and then decreasing.
+// The below solution can be used in the bitonic array also.
+// It means first array is strictly increasing and then decreasing.
 // So now there will be only 1 peak element in the array.
 public class FindPeakElement {
 
     public static void main(String[] args) {
-        int ans = findPeakElement(new int[] {1,2,4,5,3,70,6});
+        int ans = findPeakElement(new int[] {1,2,4,5,7,70,6});
         System.out.println(ans);
     }
 
@@ -38,7 +39,7 @@ public class FindPeakElement {
             //this condition is only for elements between 1st and last element of array
             if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1])
             {
-                return mid;
+                return nums[mid];
             }
 
             //here i am deciding to jump in which side if i didnt find the peak element above

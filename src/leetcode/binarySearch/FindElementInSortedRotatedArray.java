@@ -3,27 +3,16 @@ package leetcode.binarySearch;
 public class FindElementInSortedRotatedArray {
 
     public static void main(String[] args) {
+
         int index = findElement(new int[] {4,6,7,9,1,2,3});
         int indexOfTarget = binarySearch(new int[] {4,6,7,9,1,2,3}, 4, index);
         System.out.println(indexOfTarget);
-        indexOfTarget = binarySearch(new int[] {4,6,7,9,1,2,3}, 6, index);
+
+
+
+        indexOfTarget = search(new int[] {1,2,3,4,5,6}, 2);
         System.out.println(indexOfTarget);
-        indexOfTarget = binarySearch(new int[] {4,6,7,9,1,2,3}, 7, index);
-        System.out.println(indexOfTarget);
-        indexOfTarget = binarySearch(new int[] {4,6,7,9,1,2,3}, 9, index);
-        System.out.println(indexOfTarget);
-        indexOfTarget = binarySearch(new int[] {4,6,7,9,1,2,3}, 1, index);
-        System.out.println(indexOfTarget);
-        indexOfTarget = binarySearch(new int[] {4,6,7,9,1,2,3}, 2, index);
-        System.out.println(indexOfTarget);
-        indexOfTarget = binarySearch(new int[] {4,6,7,9,1,2,3}, 3, index);
-        System.out.println(indexOfTarget);
-        indexOfTarget = search(new int[] {4,6,7,9,1,2,3}, 10);
-        System.out.println(indexOfTarget);
-        indexOfTarget = search(new int[] {4,6,7,9,1,2,3}, 4);
-        System.out.println(indexOfTarget);
-        indexOfTarget = search(new int[] {4,6,7,9,1,2,3}, 2);
-        System.out.println(indexOfTarget);
+
     }
 
 

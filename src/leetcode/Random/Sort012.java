@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Random;
 
 public class Sort012 {
     public static void main(String[] args) {

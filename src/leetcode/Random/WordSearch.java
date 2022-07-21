@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Random;
 /*
 
  https://leetcode.com/problems/word-search/

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Random;
 
 public class IntersectionOf2LinkedList {
 

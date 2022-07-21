@@ -7,6 +7,8 @@ package leetcode.binarySearch;
 *  6-5 = 1 , 8-6 = 2. Hence ans is 5 as the diff is 1 and this is min,
 *
 * */
+
+// We just keep doing the binary search and in last start will give floor and the end will give ceil value indexes.
 public class FIndMinDifferenceInSortedArray {
 
     public static void main(String[] args) {
