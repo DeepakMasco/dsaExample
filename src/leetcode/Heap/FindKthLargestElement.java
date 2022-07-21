@@ -22,22 +22,19 @@ public class FindKthLargestElement {
         int [] arr = new int[] {3,2,1,5,6,4};
         int ans = findElement(arr, 2);
 
-        int[] arr1 = new int[] {3,2,3,1,2,4,5,5,6};
-        int ans1 = findElement(arr1, 4);
-
         System.out.println(ans);
-        System.out.println(ans1);
+
     }
 
     private static int findElement(int[] arr, int target) {
-        PriorityQueue<Integer> maxPq = new PriorityQueue<>();
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
         for(int i : arr) {
-            maxPq.add(i);
-            if(maxPq.size()>target) {
-                maxPq.poll();
+            minHeap.add(i);
+            if(minHeap.size()>target) {
+                minHeap.poll();
             }
         }
-        return maxPq.poll();
+        return minHeap.poll();
     }
 }

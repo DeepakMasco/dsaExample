@@ -51,7 +51,8 @@ public class KClosestNumbers {
         }
     }
 
-    //This appraoch uses binary search in a window form and which is way much faster compared to heap. But we can use this only if array is sorted
+    //This appraoch uses binary search in a window form and which is way much faster compared to heap.
+    // But we can use this only if array is sorted
     private static List<Integer> findClosestElements(int[] arr, int k, int x) {
         List<Integer> result = new ArrayList<>();
 
